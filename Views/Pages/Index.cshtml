@@ -1,0 +1,437 @@
+﻿@model KressaFashionHub.Models.ViewModels.Pages.PageVM
+
+@{
+    ViewBag.Title = ViewBag.PageTitle;
+    TempData["PageTitle"] = ViewBag.PageTitle;
+}
+
+@{
+    ViewBag.Title = "Wedding Store";
+    //Layout = null;
+}
+
+@*<h2>Dashboard</h2>*@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wedding Store A Ecommerce Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
+    <link href="~/weddingcss/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="~/weddingjs/jquery.min.js"></script>
+    <!-- Custom Theme files -->
+    <!--theme-style-->
+    <link href="~/weddingcss/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!--//theme-style-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Wedding Store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- start menu -->
+    <script src="~/weddingjs/simpleCart.min.js"></script>
+    <!-- start menu -->
+    <link href="~/weddingcss/memenu.css" rel="stylesheet" type="text/css" media="all" />
+    <script type="text/javascript" src="~/weddingjs/memenu.js"></script>
+    <script>$(document).ready(function () { $(".memenu").memenu(); });</script>
+    <!-- /start menu -->
+</head>
+<body>
+    <!--header-->
+    <div class="top_bg">
+        <div class="container">
+            <div class="header_top-sec">
+                <div class="top_right">
+                    <ul>
+                        @Html.Partial("_LoginPartial")
+                    </ul>
+                </div>
+                <div class="top_left">
+                    <ul>
+                        <li><a href="/">Papilion Fashion Hub</a></li>
+                    </ul>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-top">
+        <div class="header-bottom">
+            <div class="container">
+                <div class="logo">
+                    <a href="/admin/dashboard"><h1>Wedding Store</h1></a>
+                </div>
+                <!---->
+
+                <div class="top-nav">
+                    <ul class="memenu skyblue">
+                        <li class="active"><a href="/admin/dashboard">Home</a></li>
+
+                        <li class="grid">
+                            <a href="/home/about">About Us</a>
+                        </li>
+
+                        <li class="grid">
+                            <a href="/home/weddingdresses">Wedding Dresses</a>
+                        </li>
+
+                        <li class="grid">
+                            <a href="/home/about">Accessories</a>
+                        </li>
+
+                        <li class="grid">
+                            <a href="/home/about">Contact</a>
+                        </li>
+
+                        @*<li class="grid">
+                                <a href="/shop/categorymenupartial">Category</a>
+
+                            </li>
+
+                            <li class="grid">
+                                <a href="/admin/pages/EditSidebar">Sidebar</a>
+
+                            </li>
+                            <li class="grid"><a href="/admin/shop/Categories">Categories</a></li>
+                            <li class="grid"><a href="/admin/shop/Products">Products</a></li>*@
+                    </ul>
+                    <div class="clearfix"> </div>
+                </div>
+
+                <div class="cart box_1">
+                    <a href="/cart/index">
+                        <h3>
+                            <div class="total">
+                                <span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span>)
+                            </div>
+                            <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+                        </h3>
+                    </a>
+                    <p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="clearfix"> </div>
+
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+    <!---->
+    <div class="banner">
+        <div class="container">
+        </div>
+    </div>
+    <!---->
+    <div class="welcome">
+        <div class="container">
+            <div class="col-md-3 welcome-left">
+                <h2>Welcome to our site</h2>
+            </div>
+            <div class="col-md-9 welcome-right">
+                <h3>Proin ornare massa eu enim pretium efficitur.</h3>
+                <p>
+                    Etiam fermentum consectetur nulla, sit amet dapibus orci sollicitudin vel.
+                    Nulla consequat turpis in molestie fermentum. In ornare, tellus non interdum ultricies, elit
+                    ex lobortis ex, aliquet accumsan arcu tortor in leo. Nullam molestie elit enim. Donec ac
+                    aliquam quam, ac iaculis diam. Donec finibus scelerisque erat, non convallis felis commodo ac.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!---->
+    <div class="bride-grids">
+        <div class="container">
+            <div class="col-md-4 bride-grid">
+                <div class="content-grid l-grids">
+                    <figure class="effect-bubba">
+                        <img src="~/A-Line/2.jpg" alt="" />
+                        <figcaption>
+                            <h4>Wedding Dresses </h4>
+                            <p>Congratulations! You have forund the partner of your dreams - now it's time to find the perfect dress</p>
+                        </figcaption>
+                    </figure>
+                    <div class="clearfix"></div>
+                    <h3>Wedding Dresses</h3>
+                </div>
+                <div class="content-grid l-grids">
+                    <figure class="effect-bubba">
+                        <img src="~/Little-Bride-dress/15.jpg" alt="" />
+                        <figcaption>
+                            <h4>Little Bride Dresses</h4>
+                            <p>The perfect dress to make any girl look and feel like a princess</p>
+                        </figcaption>
+                    </figure>
+                    <div class="clearfix"></div>
+                    <h3>Little Bride</h3>
+                </div>
+            </div>
+            <div class="col-md-4 bride-grid">
+                <div class="content-grid l-grids">
+                    <img src="~/Bridesmaid-dresses/14.jpg" alt="" />
+
+                    <h3>Bridesmaid Dresses</h3>
+                </div>
+            </div>
+            <div class="col-md-4 bride-grid">
+                <div class="content-grid l-grids">
+                    <figure class="effect-bubba">
+                        <img src="~/Bride-Jewelry/2.jpg" alt="" />
+                        <figcaption>
+                            <h4>Jewelry </h4>
+                            <p>Simple, claasy and elegant jewelry to make a beautiful bride</p>
+                        </figcaption>
+                    </figure>
+                    <div class="clearfix"></div>
+                    <h3>Jewelries</h3>
+                </div>
+                <div class="content-grid l-grids">
+                    <figure class="effect-bubba">
+                        <img src="~/weddingimages/b4.jpg" alt="" />
+                        <figcaption>
+                            <h4>Nullam molestie </h4>
+                            <p>You have found the perfect woman - now it's time to find the perfect suit for your special day</p>
+                        </figcaption>
+                    </figure>
+                    <div class="clearfix"></div>
+                    <h3>Groom Suits</h3>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!---->
+    <div class="featured">
+        <div class="container">
+            <h3>Featured Products</h3>
+            <div class="feature-grids">
+                <div class="col-md-3 feature-grid jewel">
+                    <a href="/shop/categorymenupartial">
+                        <img src="~/A-Line/1.jpg" alt="" />
+                        <div class="arrival-info">
+                            <h4>A Line</h4>
+                            <p>Rs 12000</p>
+                            <span class="pric1"><del>N 18000</del></span>
+                            <span class="disc">[12% Off]</span>
+                        </div>
+                        <div class="viw">
+                            <a href="/shop/categorymenupartial"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>Quick View</a>
+                        </div>
+                        @*<div class="shrt">
+                                <a href="product.html"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Shortlist</a>
+                            </div>*@
+                    </a>
+                </div>
+                <div class="col-md-3 feature-grid">
+                    <a href="/admin/shop/Products">
+                        <img src="~/Bride-Jewelry/10.jpg" alt="" />
+                        <div class="arrival-info">
+                            <h4>Jewellerys</h4>
+                            <p>Rs 68000</p>
+                            <span class="pric1"><del>N 70000</del></span>
+                            <span class="disc">[10% Off]</span>
+                        </div>
+                        <div class="viw">
+                            <a href="/admin/shop/Products"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>Quick View</a>
+                        </div>
+                        @*<div class="shrt">
+                                <a href="product.html"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Shortlist</a>
+                            </div>*@
+                    </a>
+                </div>
+                <div class="col-md-3 feature-grid jewel">
+                    <a href="/admin/shop/Products">
+                        <img src="~/Mermaid-wedding -Dress/12.jpg" alt="" />
+                        <div class="arrival-info">
+                            <h4>Mermaid Wedding Dress </h4>
+                            <p>Rs 1200</p>
+                            <span class="pric1"><del>N 2000</del></span>
+                            <span class="disc">[10% Off]</span>
+                        </div>
+                        <div class="viw">
+                            <a href="/admin/shop/Products"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>Quick View</a>
+                        </div>
+                        @*<div class="shrt">
+                                <a href="product.html"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Shortlist</a>
+                            </div>*@
+                    </a>
+                </div>
+                <div class="col-md-3 feature-grid">
+                    <a href="/admin/shop/Products">
+                        <img src="~/Bridesmaid-dresses/13.jpg" alt="" />
+                        <div class="arrival-info">
+                            <h4>Bridesmaid Dress</h4>
+                            <p>Rs 12000</p>
+                            <span class="pric1"><del>N 18000</del></span>
+                            <span class="disc">[12% Off]</span>
+                        </div>
+                        <div class="viw">
+                            <a href="/admin/shop/Products"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>Quick View</a>
+                        </div>
+                        @*<div class="shrt">
+                                <a href="product.html"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Shortlist</a>
+                            </div>*@
+                    </a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="feature-grids">
+                <div class="col-md-3 feature-grid jewel">
+                    <a href="/admin/shop/Products">
+                        <img src="~/Little-Bride-dress/1.jpg" alt="" />
+                        <div class="arrival-info">
+                            <h4>Little Bride Dress</h4>
+                            <p>Rs 12000</p>
+                            <span class="pric1"><del>Rs 18000</del></span>
+                            <span class="disc">[12% Off]</span>
+                        </div>
+                        <div class="viw">
+                            <a href="/admin/shop/Products"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>Quick View</a>
+                        </div>
+                        @*<div class="shrt">
+                                <a href="product.html"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Shortlist</a>
+                            </div>*@
+                    </a>
+                </div>
+                <div class="col-md-3 feature-grid">
+                    <a href="/admin/shop/Products">
+                        <img src="~/straight-wedding-dress/1.jpg" alt="" />
+                        <div class="arrival-info">
+                            <h4>Straight Wedding Dress</h4>
+                            <p>Rs 12000</p>
+                            <span class="pric1"><del>N 18000</del></span>
+                            <span class="disc">[12% Off]</span>
+                        </div>
+                        <div class="viw">
+                            <a href="/admin/shop/Products"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>Quick View</a>
+                        </div>
+                        @*<div class="shrt">
+                                <a href="product.html"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Shortlist</a>
+                            </div>*@
+                    </a>
+                </div>
+                <div class="col-md-3 feature-grid jewel">
+                    <a href="/admin/shop/Products">
+                        <img src="~/Bride-Jewelry/11.jpg" alt="" />
+                        <div class="arrival-info">
+                            <h4>Jewellery</h4>
+                            <p>N 12000</p>
+                            <span class="pric1"><del>Rs 18000</del></span>
+                            <span class="disc">[12% Off]</span>
+                        </div>
+                        <div class="viw">
+                            <a href="/admin/shop/Products"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>Quick View</a>
+                        </div>
+                        @*<div class="shrt">
+                                <a href="product.html"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Shortlist</a>
+                            </div>*@
+                    </a>
+                </div>
+                <div class="col-md-3 feature-grid">
+                    <a href="/admin/shop/Products">
+                        <img src="~/Trumpet-Wedding-Dresses/1.jpg" alt="" />
+                        <div class="arrival-info">
+                            <h4>Trumpet Wedding Dress</h4>
+                            <p>Rs 12000</p>
+                            <span class="pric1"><del>N 18000</del></span>
+                            <span class="disc">[12% Off]</span>
+                        </div>
+                        <div class="viw">
+                            <a href="/admin/shop/Products"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>Quick View</a>
+                        </div>
+                        @*<div class="shrt">
+                                <a href="product.html"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Shortlist</a>
+                            </div>*@
+                    </a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+
+    <!---->
+    <!---->
+    <div class="shoping">
+        <div class="container">
+            <div class="shpng-grids">
+                <div class="col-md-4 shpng-grid">
+                    <h3>Free Shipping</h3>
+                    <p>On Order Over Rs999</p>
+                </div>
+                <div class="col-md-4 shpng-grid">
+                    <h3>Order Return</h3>
+                    <p>Return Within 14days</p>
+                </div>
+                <div class="col-md-4 shpng-grid">
+                    <h3>COD</h3>
+                    <p>Cash On Delivery</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <!---->
+    <br />
+
+    <div class="footer">
+        <div class="container">
+            <div class="ftr-grids">
+                <div class="col-md-3 ftr-grid">
+                    <h4>About Us</h4>
+                    <ul>
+                        <li><a href="#">Who We Are</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Our Sites</a></li>
+                        <li><a href="#">In The News</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 ftr-grid">
+                    <h4>Customer service</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Cancellation</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Bulk Orders</a></li>
+                        <li><a href="#">Buying Guides</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 ftr-grid">
+                    <h4>Your account</h4>
+                    <ul>
+                        <li><a href="account.html">Your Account</a></li>
+                        <li><a href="#">Personal Information</a></li>
+                        <li><a href="#">Addresses</a></li>
+                        <li><a href="#">Discount</a></li>
+                        <li><a href="#">Track your order</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 ftr-grid">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#">> Wedding</a></li>
+                        <li><a href="#">> Jewellerys</a></li>
+                        <li><a href="#">> Shoes</a></li>
+                        <li><a href="#">> Flowers</a></li>
+                        <li><a href="#">> Cakes</a></li>
+                        <li><a href="#">...More</a></li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <!---->
+    <div class="copywrite">
+        <div class="container">
+            <p>Copyright © 2015 Wedding Store. All Rights Reserved | Design by Kressa Special</p>
+        </div>
+    </div>
+</body>
+</html>
+
+
+

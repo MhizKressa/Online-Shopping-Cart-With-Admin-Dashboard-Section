@@ -1,0 +1,205 @@
+﻿@model IEnumerable<KressaFashionHub.Models.ViewModels.Pages.PageVM>
+
+@{
+    ViewBag.Title = "Pages";
+    //Layout = null;
+}
+
+@*<h2>Pages</h2>*@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wedding Store A Ecommerce Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
+    <link href="~/weddingcss/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="~/weddingjs/jquery.min.js"></script>
+    <!-- Custom Theme files -->
+    <!--theme-style-->
+    <link href="~/weddingcss/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!--//theme-style-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Wedding Store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- start menu -->
+    <script src="~/weddingjs/simpleCart.min.js"></script>
+    <!-- start menu -->
+    <link href="~/weddingcss/memenu.css" rel="stylesheet" type="text/css" media="all" />
+    <script type="text/javascript" src="~/weddingjs/memenu.js"></script>
+    <script>$(document).ready(function () { $(".memenu").memenu(); });</script>
+    <!-- /start menu -->
+</head>
+<body>
+    <!--header-->
+    <div class="top_bg">
+        <div class="container">
+            <div class="header_top-sec">
+                <div class="top_right">
+                    <ul>
+                        @Html.Partial("_LoginPartial")
+                    </ul>
+                </div>
+                <div class="top_left">
+                    <ul>
+                        <li><a href="/">Papilion Fashion Hub</a></li>
+                    </ul>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-top">
+        <div class="header-bottom">
+            <div class="container">
+                <div class="logo">
+                    <a href="/admin/dashboard"><h1>Wedding Store</h1></a>
+                </div>
+                <!---->
+
+                <div class="top-nav">
+                    <ul class="memenu skyblue">
+                        <li class="active"><a href="/admin/dashboard">Home</a></li>
+                        <li class="grid">
+                            <a href="/admin/pages">Pages</a>  
+                        </li>
+                        <li class="grid">
+                            <a href="/admin/pages/EditSidebar">Sidebar</a>
+                        </li>
+                        <li class="grid"><a href="/admin/shop/Categories">Categories</a></li>
+                        <li class="grid"><a href="/admin/shop/Products">Products</a></li>
+                    </ul>
+                    <div class="clearfix"> </div>
+                </div>
+                <!---->
+                <div class="cart box_1">
+                    <a href="checkout.html">
+                        <h3>
+                            <div class="total">
+                                <span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span>)
+                            </div>
+                            <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+                        </h3>
+                    </a>
+                    <p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="clearfix"> </div>
+                <!---->
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+    <!---->
+    <div class="page-banner">
+        <div class="container">
+        </div>
+    </div>
+    <div class="container">
+        <ol class="breadcrumb">
+            <li><a href="/admin/dashboard">Home</a></li>
+            <li class="active">Add Page</li>
+        </ol>
+        </div>
+        <!---->
+        <!---->
+
+<h3><p>
+    @Html.ActionLink("Add New Page", "AddPage")
+</p></h3>
+    <br />
+
+@if (!Model.Any())
+{
+    <h1 class="text-center">There are no pages</h1>
+}
+else
+{
+    <table class="table sorting" id="pages">
+        <tr class="home">
+            <th>
+                Title
+            </th>
+            <th>
+                Slug
+            </th>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.Body)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Sorting)
+                </th>*@
+            <th>
+                Sidebar
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr id="id_@item.Id" class="@item.Slug">
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Slug)
+                </td>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.Body)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Sorting)
+                    </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.HasSidebar)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "EditPage", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "PageDetails", new { id = item.Id }) |
+                    @if (item.Slug != "home")
+                    {
+                        @Html.ActionLink("Delete", "DeletePage", new { id = item.Id }, new { @class = "delete" })
+                    }
+
+                </td>
+            </tr>
+        }
+
+    </table>
+}
+
+@section Scripts{
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <script>
+
+        $(function () {
+
+            //Confirm page deletion
+
+            $("a.delete").click(function () {
+                if (!confirm("Confirm Page Deletion")) return false;
+            });
+
+            ////////////////////////////////////////////////////////
+
+            //Reorder Pages
+
+            $("table#pages tbody").sortable({
+                items: "tr:not(.home)",
+                placeholder: "ui-state-highlight",
+                update: function () {
+                    var ids = $("table#pages tbody").sortable("serialize");
+                    var url = "/Admin/Pages/ReorderPages";
+
+                    $.post(url, ids, function (data) {
+                    });
+                }
+            });
+        });
+
+    </script>
+
+}
+    </body>
+</html>
